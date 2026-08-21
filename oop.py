@@ -240,24 +240,83 @@
 
 # print([1, 2, 3]+[4, 5, 6])
 
-class Complex:
-    def __init__(self, real, img):
-        self.real = real
-        self.img = img
+# polymorphism and dunder function
+# class Complex:
+#     def __init__(self, real, img):
+#         self.real = real
+#         self.img = img
     
-    def showNumber(self):
-        print(self.real,"i+",self.img,"j")
+#     def showNumber(self):
+#         print(self.real,"i+",self.img,"j")
     
-    def add(self, num2):
-        newReal = self.real + num2.real
-        newImg = self.img + num2.img
-        return Complex(newReal, newImg)
+#     def __add__(self, num2):
+#         newReal = self.real + num2.real
+#         newImg = self.img + num2.img
+#         return Complex(newReal, newImg)
 
-num1 = Complex(1,5)
-num1.showNumber()
+# num1 = Complex(1,5)
+# num1.showNumber()
 
-num2 = Complex(4,6)
-num2.showNumber()
+# num2 = Complex(4,6)
+# num2.showNumber()
 
-num3 = num1.add(num2)
-num3.showNumber()
+# num3 = num1 + num2
+# num3.showNumber()
+
+
+# class Complex:
+#     def __init__(self, real, img):
+#         self.real = real
+#         self.img = img
+    
+#     def showNumber(self):
+#         print(self.real, "i+" ,self.img,"j")
+    
+#     def __sub__(self,num2):
+#         newReal = self.real - num2.real
+#         newImg = self.img - num2.img
+#         return Complex(newReal, newImg)
+
+# num1 = Complex(10,20)
+# num1.showNumber()
+
+# num2 = Complex(5,5)
+# num2.showNumber()
+
+# num3 = num1 - num2
+# num3.showNumber()
+
+
+# task-1
+# class Circle:
+#     def __init__(self,radius):
+#         self.radius = radius
+    
+#     def Area(self):
+#         return (22/7) * self.radius ** 2
+    
+#     # def showArea(self):
+#     #     print("The area is", self.area)
+    
+#     def Perimeter(self):
+#         return 2 * (22/7) * self.radius
+    
+#     # def showPerimeter(self):
+#     #     print("The perimeter is",self.perimeter)
+
+# c1 = Circle(10)
+# print(c1.Area())
+
+
+class Employee:
+    def __init__(self, role, department, salary):
+        self.role = role
+        self.department = department
+        self.salary = salary
+    
+    def showDetails(self):
+        print("Role:",self.role,"\n","department: ",self.department,"\n","salary: ",self.salary,"\n")
+
+emp1 = Employee("Manager", "BIT", 1000000)
+emp1.showDetails()
+
